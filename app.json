@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "agenda",
-    "slug": "agenda",
+    "slug": "agenda-unicornio",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ff36ab"
     },
     "ios": {
       "supportsTablet": true
@@ -18,13 +18,42 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ff36ab"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
+    "plugins": [
+      "expo-sqlite",
+      "expo-router",
+      "expo-background-task",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification_icon.png",
+          "color": "#ff36ab",
+          "sounds": [
+            "./assets/notification_truck.mp3",
+            "./assets/notification_mistery.mp3"
+          ],
+          "enableBackgroundRemoteNotifications": false
+        }
+      ]
+    ],
+    "scheme": "agenda",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5dfafe0b-69a8-4ef4-8257-3c545eaefd7d"
+      }
+    },
+    "owner": "joseptomas"
   }
 }
